@@ -25,7 +25,7 @@ function Mahsulot() {
         <h2 className="text-xl font-mono text-red-700 font-bold ">{maxsulot?.discount_price||"Narxi"} so'm</h2>
         <del className="text-gray-400">{maxsulot?.discount_price * 1.2 ||"chegirma"}</del>
         </div>
-        <button className="bg-yellow-300 rounded-lg text-sm p-1 ">
+        <button className="cursor-pointer bg-yellow-300 rounded-lg text-sm p-1 ">
           {" "}
           2 148 000 so'm x 12 oy
         </button>
