@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import Yulduz from "../../assets/yulduz.svg";
 import Analytics03Icon from "../../assets/Tradin";
-import Max from "../../assets/15Max.png";
 import ButtonGb from "./ButtonGb";
 import Apple from "../../assets/apple.jpg";
 import axios from "axios";
 import { useParams } from "react-router";
+import AlertCircleIcon from "../../assets/Not";
+import Car from '../../assets/car.svg'
+import ShoppingCart01Icon from "../../assets/savat";
 function CardTitle() {
   const [title, setTitle] = useState([]);
   const { alias } = useParams();
@@ -190,14 +192,28 @@ function CardTitle() {
             </p>
           </div>
         </div>
-        <div className="flex flex-col gap-3 w-[380px] h-auto p-4 border-2 border-gray-200 rounded-xl">
-          <h2 className="font-bold text-3xl font-sans">{title.total_price} so'm</h2>
-          <div className="flex justify-between items-center mt-3">
+        <div className="flex flex-col gap-3 w-[380px] h-[480px] p-6 border-2 border-gray-200 rounded-xl">
+          <h2 className="font-bold text-3xl font-sans">
+            {title.total_price} so'm
+          </h2>
+          <div className="flex justify-between items-center my-3">
             <p className="text-gray-400">
               Yetkazib berish to'g'risida ma'lumot:
             </p>
-
+            <AlertCircleIcon />
           </div>
+            <div className="mb-12">
+                <div className="flex items-center gap-2">
+                <img src={Car} alt="" />
+                <p className="font-bold text-xl">Standart yetkazib berish</p>
+                </div>
+                <p className="pl-8 text-xl">Manzilga qarab 4 soatdan 2 ish</p>
+                <p className="pl-8 text-xl">kunigacha yetkazib beriladi</p>
+            </div>
+            <hr className="mt-6 mb-4"/>
+            <button className="w-full p-2 cursor-pointer  bg-green-400 rounded-xl text-white flex items-center justify-center">Savatchaga qo'shish</button>
+            <button className="w-full p-2 cursor-pointer bg-transparent border-2 border-black rounded-xl flex items-center justify-center">Bir klikda Sotib Olish</button>
+            <p className="font-bold text-xl hover:text-red-400 cursor-pointer">Insales Store</p>
         </div>
       </div>
     </div>
