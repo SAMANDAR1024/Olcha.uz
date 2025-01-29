@@ -2,12 +2,10 @@ import React, { useEffect, useState } from "react";
 import Yulduz from "../../assets/yulduz.svg";
 import Analytics03Icon from "../../assets/Tradin";
 import ButtonGb from "./ButtonGb";
-import Apple from "../../assets/apple.jpg";
 import axios from "axios";
 import { useParams } from "react-router";
 import AlertCircleIcon from "../../assets/Not";
 import Car from '../../assets/car.svg'
-import ShoppingCart01Icon from "../../assets/savat";
 function CardTitle() {
   const [title, setTitle] = useState([]);
   const { alias } = useParams();
@@ -77,22 +75,22 @@ function CardTitle() {
           <div className="flex items-center gap-2">
             <img
               className="w-20 border-2 p-1 border-black rounded-lg"
-              src={Apple}
+              src={title.main_image}
               alt=""
             />
             <img
               className="w-20 border-2 p-1 border-black rounded-lg"
-              src={Apple}
+              src={title.main_image}
               alt=""
             />
             <img
               className="w-20 border-2 p-1 border-black rounded-lg"
-              src={Apple}
+              src={title.main_image}
               alt=""
             />
             <img
               className="w-20 border-2 p-1 border-black rounded-lg"
-              src={Apple}
+              src={title.main_image}
               alt=""
             />
           </div>
